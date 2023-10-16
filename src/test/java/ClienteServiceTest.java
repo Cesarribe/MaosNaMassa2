@@ -40,7 +40,7 @@ public class ClienteServiceTest {
     }
     @Test
     public void salvarCliente () throws TipoChaveNaoEncontradaException {
-        Boolean retorno = clienteService.salvar(cliente);
+        Boolean retorno = clienteService.cadastrar(cliente);
         Assert.assertTrue(retorno);
     }
     @Test

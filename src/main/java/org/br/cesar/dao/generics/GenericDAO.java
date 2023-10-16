@@ -4,19 +4,18 @@ import org.br.cesar.anotation.TipoChave;
 import org.br.cesar.domain.Persistente;
 import org.br.cesar.exceptions.TipoChaveNaoEncontradaException;
 
+import java.io.Serializable;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.Map;
 
-public abstract class GenericDAO<T extends Persistente> implements IGenericDAO<T> {
+public abstract class GenericDAO <T extends Persistente> implements IGenericDAO<T, Serializable> {
 
     //protected Map<Class, Map<Long, T>> map = new HashMap<>();
 
-    /**
-     * Necessário utilizar Singleton para ter apenas um MAP no sistema
-     */
+
     private SingletonMap singletonMap;
 
     public abstract Class<T> getTipoClasse();

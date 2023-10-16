@@ -4,11 +4,13 @@ import org.br.cesar.domain.Cliente;
 import org.br.cesar.exceptions.TipoChaveNaoEncontradaException;
 
 public interface IClienteService {
-    boolean salvar(Cliente cliente) throws TipoChaveNaoEncontradaException;
+    Boolean cadastrar(Cliente cliente) throws TipoChaveNaoEncontradaException;
 
-    Cliente buscarPorCPF(long cpf);
+    Cliente buscarPorCPF(Long cpf);
 
-    void excluir(long cpf);
+    void excluir(Long cpf);
 
-    void alterar(Cliente cliente) throws TipoChaveNaoEncontradaException;;
+    void alterar(Cliente cliente) throws TipoChaveNaoEncontradaException;
+
+
 }

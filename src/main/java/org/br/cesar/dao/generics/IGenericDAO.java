@@ -3,9 +3,10 @@ package org.br.cesar.dao.generics;
 import org.br.cesar.domain.Persistente;
 import org.br.cesar.exceptions.TipoChaveNaoEncontradaException;
 
+import java.io.Serializable;
 import java.util.Collection;
 
-public interface IGenericDAO <T extends Persistente> {
+public interface IGenericDAO <T extends Persistente, E extends Serializable> {
 
     /**
      * Método para cadastrar novos registro no banco de dados
